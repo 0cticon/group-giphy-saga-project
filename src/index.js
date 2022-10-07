@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import App from './components/App/App';
 import logger from 'redux-logger';
-import registerServiceWorker from './registerServiceWorker';
+// import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
@@ -21,7 +21,7 @@ const storeInstance = createStore(
     applyMiddleware(logger)
 );
 
-main
+
 
 ReactDOM.render(
     <Provider store={storeInstance}>
@@ -29,4 +29,4 @@ ReactDOM.render(
     </Provider>, 
     document.getElementById('root')
 );
-registerServiceWorker();
+// registerServiceWorker();
