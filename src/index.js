@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App/App';
 import logger from 'redux-logger';
+import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
+
 
 
 ReactDOM.render(
@@ -12,3 +14,4 @@ ReactDOM.render(
     </Provider>, 
     document.getElementById('root')
 );
+registerServiceWorker();
