@@ -6,6 +6,20 @@ import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+
+const sagaMiddleware = createSagaMiddleware();
+
+
+const storeInstance = createStore (
+    combineReducers(
+        {
+
+        }
+    ),
+    applyMiddleware(sagaMiddleware, logger),
+
+)
 
 ReactDOM.render(
     <Provider store={storeInstance}>
