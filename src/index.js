@@ -5,7 +5,7 @@ import App from './components/App/App';
 import logger from 'redux-logger';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
-feature-sagaImports
+
 import createSagaMiddleware from 'redux-saga';
 import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
