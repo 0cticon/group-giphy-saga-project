@@ -9,6 +9,16 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 
 
 
+const storeInstance = createStore(
+    combineReducers(
+        {
+         
+        }   
+    ),
+    applyMiddleware(logger)
+);
+
+
 ReactDOM.render(
     <Provider store={storeInstance}>
         <App/>
