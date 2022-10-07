@@ -7,6 +7,16 @@ import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 
 
+const storeInstance = createStore(
+    combineReducers(
+        {
+         
+        }   
+    ),
+    applyMiddleware(logger)
+);
+
+
 ReactDOM.render(
     <Provider store={storeInstance}>
         <App/>
