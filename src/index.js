@@ -10,8 +10,16 @@ import { takeEvery, put } from 'redux-saga/effects';
 import axios from 'axios';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 
+const category = (state = '', action) => {
+    return state;
+}
 
-
+const storeInstance = createStore(
+    combineReducers({
+        category
+    }),
+    applyMiddleware(logger),
+);
 
 
 ReactDOM.render(
