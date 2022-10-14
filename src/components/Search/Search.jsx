@@ -8,10 +8,10 @@ function Search () {
     const [tag, setTag] = useState('');
 
     const getSearch = () => {
-        axios. get(`/search/${tag}`)
+        axios. get(`api/search/${tag}`)
             .then(response => {
-                console.log(response.data.data.data.images.downsized_medium.url);
-                setGiphList(response.data.data.data.images.downsized_medium.url);
+                console.log(response.data);
+                setGiphList(response.data.data);
             }).catch(error => {
                 console.log(error);
                 alert('Something wrong in search GET');
@@ -33,6 +33,19 @@ function Search () {
                 <input type="text" onChange={handleChange} value={tag}/>
                 <input type="submit"/>
             </form>
+            {/* {JSON.stringify(giphList)} */}
+            <ul>
+            {
+                giphList.map(giph => {
+                    return (
+                        <li>
+                            <img src={giph.images.fixed_height.url} />
+                            
+                        </li>
+                    )
+                })
+            }
+            </ul>
         </>
     )
 }
